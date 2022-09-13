@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dbup" />
+    <None Remove="dbup-core" />
+    <None Remove="dbup-sqlserver" />
+    <None Remove="dbup-consolescripts" />
+    <None Remove="Scripts\2019_06_10\001_Create_Table_TeacherMaster.sql" />
+    <None Remove="App.config" />
+    <None Remove="System.Configuration.ConfigurationManager" />
+    <None Remove="Scripts\2019_06_10\002_Create_Table_DesignationMaster.sql" />
+    <None Remove="Scripts\2019_06_10\003_Fill_DesignationMaster.sql" />
+    <None Remove="Scripts\2019_06_15\001_SP_Proc_InsertTeacher.sql" />
+    <None Remove="Scripts\2019_06_15\002_SP_Proc_UpdateTeacher.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="dbup" Version="4.6.0" />
+    <PackageReference Include="dbup-core" Version="4.6.3" />
+    <PackageReference Include="dbup-sqlserver" Version="4.6.0" />
+    <PackageReference Include="dbup-consolescripts" Version="1.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\2019_06_10\001_Create_Table_TeacherMaster.sql" />
+    <EmbeddedResource Include="Scripts\2019_06_10\002_Create_Table_DesignationMaster.sql" />
+    <EmbeddedResource Include="Scripts\2019_06_10\003_Fill_DesignationMaster.sql" />
+    <EmbeddedResource Include="Scripts\2019_06_15\001_SP_Proc_InsertTeacher.sql" />
+    <EmbeddedResource Include="Scripts\2019_06_15\002_SP_Proc_UpdateTeacher.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config" />
+  </ItemGroup>
+</Project>
